@@ -1,0 +1,52 @@
+{
+    "env":
+    {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:tailwindcss/recommended", "standard"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "tailwindcss"],
+    "rules":
+    {
+        "react-hooks/rules-of-hooks": "off",
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "no-console": "warn",
+        "@next/next/no-server-import-in-page": "off",
+        "@next/next/no-script-in-document": "off",
+        "no-unused-vars": "off",
+        "semi": ["error", "always"],
+        "curly": ["error", "multi-or-nest"],
+        "brace-style": ["error", "allman"],
+        "func-call-spacing": "off",
+        "operator-linebreak": "off",
+        "array-callback-return": "off",
+        "template-tag-spacing": "off",
+        "tailwindcss/no-custom-classname": "off",
+        "indent":
+        [
+            "error", 4,
+            {
+                "SwitchCase": 1,
+                "VariableDeclarator": 1,
+                "ignoredNodes":
+                [
+                    "PropertyDefinition[decorators]",
+                    "TSUnionType",
+                    "FunctionExpression[params]:has(Identifier[decorators])"
+                ]
+            }
+        ],
+        "template-curly-spacing": ["error", "always"],
+        "space-before-function-paren": ["error", "never"],
+        "no-unexpected-multiline": "off",
+        "quotes":
+        [
+            2, "single",
+            {
+                "avoidEscape": true
+            }
+        ]
+    }
+}
